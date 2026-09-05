@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KNOOVI Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div class="layout">
+  <aside>
+    <div class="brand"><span>♡</span> KNOOVI <small>ADMIN</small></div>
+    <nav>
+      <button class="nav active" data-view="dashboard">📊 Dashboard</button>
+      <button class="nav" data-view="products">🛍 Products</button>
+      <button class="nav" data-view="orders">📦 Orders</button>
+      <button class="nav" data-view="banners">🎨 Offer Banners</button>
+      <button class="nav" data-view="coupons">🎟 Coupons</button>
+      <button class="nav" data-view="settings">⚙️ Settings</button>
+    </nav>
+    <a class="site-link" href="../index.html">← View Store</a>
+  </aside>
+  <main>
+    <header><div><p class="eyebrow">KNOOVI</p><h1 id="pageTitle">Dashboard</h1></div><button class="ghost" onclick="exportData()">Export Backup</button></header>
+    <section id="dashboard" class="view active"></section>
+    <section id="products" class="view"></section>
+    <section id="orders" class="view"></section>
+    <section id="banners" class="view"></section>
+    <section id="coupons" class="view"></section>
+    <section id="settings" class="view"></section>
+  </main>
+</div>
+
+<div id="modal" class="modal hidden"><div class="modal-card"><button class="x" onclick="closeModal()">×</button><div id="modalBody"></div></div></div>
+<script src="admin.js"></script>
+</body>
+</html>
